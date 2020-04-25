@@ -9,6 +9,7 @@
 #include <iostream>
 #include "Account.h"
 #include "Customer.h"
+#include "Bank.h"
 using namespace std;
 //-----------------------------------------------------------------------------
 //	THE MAIN ENTRY POINT TO THE PROGRAM.
@@ -26,6 +27,10 @@ int main(int argc, char* argv[])
 	kim.addAccount(kim1);
 	kim.addAccount(kim2);
 	cout << kim << '\n';
+
+	Bank nordea{ "Nordea", kim1 };
+	nordea.addAccount(kim2);
+	cout << nordea << '\n';
 
 	return 0;
 }
